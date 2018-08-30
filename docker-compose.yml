@@ -1,0 +1,32 @@
+version: '3.6'
+
+services:
+  db:
+    container_name: psql_db
+    image: postgres:10.1-alpine
+    env_file:
+      - .env
+    volumes:
+      - ${HOST_DATABASE_FILES}:/var/lib/postgresql/data/
+  django:
+    container_name: django_server
+    build: .
+    command: python /code/manage.py migrate --noinput
+    command: python /code/manage.py runserver 0.0.0.0:8000
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/code
+    links:
+      - selenium
+    ports:
+      - 8000:8000
+    environment:
+      - SECRET_KEY=changemeinprod
+    depends_on:
+      - db
+  selenium:
+    image: selenium/standalone-chrome-debug:3.7.1
+    ports:
+      - 4444:4444   # Selenium
+      - 5900:5900   # VNC server
