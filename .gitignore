@@ -1,3 +1,4 @@
 .env
 .dockerignore
 public
+__pycache__/
