@@ -1,14 +1,14 @@
 import socket
-from urllib.parse import urlparse
 
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
-from django.test import override_settings, tag
+from django.urls import resolve
 
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
+from project.website.views import index
 
-@override_settings(ALLOWED_HOSTS=['*'])  # Disable ALLOW_HOSTS
+
 class BaseTestCase(StaticLiveServerTestCase):
     """
     Provides base test class which connects to the Docker
@@ -32,17 +32,17 @@ class BaseTestCase(StaticLiveServerTestCase):
         cls.selenium.quit()
         super().tearDownClass()
 
-class AdminTest(BaseTestCase):
-    fixtures = ['project/website/fixtures/users.json']
+class HomePageTest(BaseTestCase):
 
-    def test_login(self):
-        """
-        """
+    def test_root_url_resolves_to_home_page_view(self):
+        found = resolve('/')
+        self.assertEqual(found.func, index)
+
+    def test_home_page_returns_correct_html(self):
         self.live_server_url = self.live_server_url
         self.selenium.get(self.live_server_url)
 
-        path = urlparse(self.selenium.current_url).path
-        self.assertEqual('/', path)
-
-        body_text = self.selenium.find_element_by_tag_name('body').text
-        self.assertIn('Kabiria', body_text)
+        html = self.selenium.page_source
+        self.assertTrue(html.startswith('<!DOCTYPE html>'))
+        self.assertIn('<title>Kabiria</title>', html)
+        self.assertTrue(html.endswith('</html>'))
