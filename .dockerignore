@@ -1,2 +1,9 @@
 public
 __pychace__
+.git
+.gitignore
+*.pyc
+Makefile
+docker-compose.yml
+*.md
+*Dockerfile*
