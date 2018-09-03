@@ -1,5 +1,5 @@
 
-#### From https://github.com/marcgibbons/django-selenium-docker
+#### With help from: https://github.com/marcgibbons/django-selenium-docker
 
 # Example: Django Selenium Tests with Docker
 
@@ -12,6 +12,8 @@
 ## Installation
 `$ docker-compose build`
 
+## Environment settings
+`$ cp .env-example .env`
 
 ## Running the tests
 1. Start the selenium container:
