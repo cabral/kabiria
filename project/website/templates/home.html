@@ -9,18 +9,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+      <!-- <img class="first-slide" src="{% static 'images/slide1.jpg' %}" alt="First slide"> -->
+      <<video src="https://drive.google.com/open?id=0B1IkjgU6vrkEa1VaRTVPYlFrWEE" autoplay poster="{% static 'images/slide1.jpg'">
+
+      </video>
       <div class="container">
-        <div class="carousel-caption text-left">
-          <h1>O Poder de um Lápis</h1>
-          <p>...Então veio o dia seguinte, 12 de outubro. Dia de entregar para cada criança seu lápis e seu caderno. De se surpreender ao ver o sorriso no rosto de cada uma e a comemoração por aquilo. Do brilho nos olhos. Da (única) bola de futebol deixada de lado. Aquele lápis era muito mais legal que uma bola de futebol! Aquele simples lápis ia fazer com que a Rosemarie virasse uma professora e a Carol uma médica. Aquele lápis ia dar o poder as meninas e meninos que eles temiam perder: o direito a educação.
-          </br>
-          </br>
-          Um simples lápis de 25 centavos comprado numa barraquinha no fim de uma rua. Um simples lápis que está reescrevendo a história de todas elas.</p>
-          <strong>Munike Ávila</strong>
-          </br>
-          </br>
-          <p><a class="btn btn-lg btn-primary" href="#" role="button">Entenda mais!</a></p>
+        <div class="carousel-caption carousel-text">
+          <p><a class="btn btn-lg btn-primary" target="_blank" href="https://drive.google.com/open?id=1NnD5YG4PlcJFkTZHAwrR3OIkjYbakTcw" role="button">Conheça a Escola Kabiria!</a></p>
         </div>
       </div>
     </div>
@@ -37,32 +32,32 @@
   <!-- Three columns of text below the carousel -->
   <div class="row">
     <div class="col-lg-4">
-      <img class="rounded-circle" src="{% static 'images/profile.jpg' %}" alt="Generic placeholder image" width="140" height="140">
+      <img class="rounded-circle" src="{% static 'images/alunos.jpg' %}" alt="Generic placeholder image" width="140" height="140">
       </br>
       </br>
       <h2>Alunos da Escola</h2>
       <p>Nossa aluna Chance pode parecer um pouco tímida, mas é a primeira a levantar o braço quando a professora faz uma pergunta! Estudiosa e dedicada, seu sonho é poder virar uma professora também. E já sabemos que será uma super prof!</p>
       <strong>Chance Kibengo</strong>
-      <p><a class="btn btn-secondary" href="#" role="button">Veja mais relatos &raquo;</a></p>
+      <p><a class="btn btn-secondary know-more" href="#" role="button">Veja mais relatos &raquo;</a></p>
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
-      <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+      <img class="rounded-circle" src="{% static 'images/voluntarios.jpg' %}" alt="Generic placeholder image" width="140" height="140">
       </br>
       </br>
       <h2>Voluntários</h2>
       <p>"Estávamos em viagem pelo continente africano e foi assim que conhecemos a Escola Primária Kabiria, cuja finalidade é atender gratuitamente as crianças moradoras do bairro fugitivas das guerras civis. Apesar de termos conhecido um orfanato e outro projeto escolar estrangeiro no Quênia, nos apaixonamos pelas crianças e pelo projeto Kabiria! São inúmeras as dificuldades, mas as crianças aprendem mesmo!"</p>
       <strong>Marcela Lacerda</strong>
-      <p><a class="btn btn-secondary" href="#" role="button">Veja mais relatos &raquo;</a></p>
+      <p><a class="btn btn-secondary know-more" href="#" role="button">Veja mais relatos &raquo;</a></p>
     </div><!-- /.col-lg-4 -->
     <div class="col-lg-4">
-      <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+      <img class="rounded-circle" src="{% static 'images/colaboradores.jpg' %}" alt="Generic placeholder image" width="140" height="140">
       </br>
       </br>
       <h2>Colaboradores</h2>
       <p>"O projeto está em meu coração, o sorriso das crianças e a esperança em seus olhares, me fazem ver a importância da minha própria vida, do meu caminhar e do bem que nunca podemos deixar de acreditar.
       Poder contribuir com o Projeto Kabíria foi muito especial. Contribuir com o futuro e a educação das crianças aquece o coração."</p>
       <strong>Suellem Santana</strong>
-      <p><a class="btn btn-secondary" href="#" role="button">Veja mais relatos &raquo;</a></p>
+      <p><a class="btn btn-secondary know-more" href="#" role="button">Veja mais relatos &raquo;</a></p>
     </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->
 
@@ -73,28 +68,19 @@
 
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
-    <div class="col-md-5">
-      <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-7 order-md-2">
-      <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
-    <div class="col-md-5 order-md-1">
-      <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      <h2 class="featurette-heading">O Poder  <span class="text-muted">de um Lápis.</span></h2>
+      <p class="lead">...Então veio o dia seguinte, 12 de outubro. Dia de entregar para cada criança seu lápis e seu caderno. De se surpreender ao ver o sorriso no rosto de cada uma e a comemoração por aquilo. Do brilho nos olhos. Da (única) bola de futebol deixada de lado. Aquele lápis era muito mais legal que uma bola de futebol! Aquele simples lápis ia fazer com que a Rosemarie virasse uma professora e a Carol uma médica. Aquele lápis ia dar o poder as meninas e meninos que eles temiam perder: o direito a educação.</p>
+      </br>
+      </br>
+      <span class="text-muted">
+      Um simples lápis de 25 centavos comprado numa barraquinha no fim de uma rua. Um simples lápis que está reescrevendo a história de todas elas.
+      </span>
+      <p>Munike Ávila</p>
+      </br>
+      </br>
     </div>
   </div>
-
   <hr class="featurette-divider">
-
   <div class="row featurette">
     <div class="col-md-7">
       <h2 class="featurette-heading">Quem faz a</br><span class="text-muted">Escola Kabiria</span></h2>
@@ -108,9 +94,6 @@
       <span class="text-muted">
         "Antes do projeto tínhamos algo parecido com uma escola pois nem quadros suficientes tínhamos. Mas agora temos o orgulho de chamar de escola!  As crianças estão comendo, as professoras estão sendo pagas, as crianças tem seu próprio material e uniformes. Somos muito gratos a todas as pessoas que ajudam na educação das nossas crianças aqui na comunidade."       </span>
         - Jacob Mkombozi</p>
-    </div>
-    <div class="col-md-5">
-      <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
     </div>
   </div>
 

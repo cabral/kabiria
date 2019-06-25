@@ -8,8 +8,22 @@ body {
   color: #5a5a5a;
 }
 
+.nav-custom {
+  background-color: #3a201d;
+}
+
+/* .donation {
+  background-color: green;
+  color:white;
+} */
+
+.know-more {
+  background-color: #A26C30;
+  border-color: #f98459;
+}
 
 /* CUSTOMIZE THE CAROUSEL
+
 -------------------------------------------------- */
 
 /* Carousel base class */
@@ -24,8 +38,12 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 32rem;
-  background-color: #777;
+  height: 32em;
+  background-color: #FFC372;
+}
+
+.carousel-text {
+  color: black;
 }
 .carousel-item > img {
   position: absolute;
