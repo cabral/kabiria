@@ -1,1 +1,1 @@
-web: gunicorn kabiria.wsgi
+web: gunicorn project.wsgi
