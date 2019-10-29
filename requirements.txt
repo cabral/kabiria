@@ -1,5 +1,5 @@
 django-extensions==2.1.2
-Django==2.1.2
+Django==2.1.11
 ipdb==0.11
 psycopg2==2.7.5
 python-decouple==3.1
